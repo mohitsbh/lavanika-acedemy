@@ -1,4 +1,6 @@
 import type { Metadata } from "next"
+import PageHeader from "@/components/page-header"
+import SectionWrapper from "@/components/section-wrapper"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import AnimateOnScroll from "@/components/animate-on-scroll"
@@ -24,32 +26,24 @@ function GoogleLogo({ className }: { className?: string }) {
 export default function ReviewPage() {
   return (
     <div className="pt-20">
-      <section className="relative overflow-hidden py-20 md:py-28">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] via-surface to-primary/10" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
-        <div className="relative max-w-4xl mx-auto px-5 text-center">
-          <Badge className="mb-5 bg-primary/10 text-primary border-primary/20">TESTIMONIALS</Badge>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-on-surface tracking-tight leading-[1.1]">
-            Real Results.{" "}
-            <span className="text-primary">Real Dentists. Real Journeys.</span>
-          </h1>
-          <p className="text-on-surface-variant text-lg md:text-xl mt-5 max-w-2xl mx-auto leading-relaxed">
-            Hear from our successful candidates &mdash; real stories of dedication, expert guidance, and ADC success from dentists around the world.
-          </p>
-          <div className="flex items-center justify-center gap-3 mt-8">
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 backdrop-blur border border-gray-100 shadow-sm">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
-                ))}
-              </div>
-              <span className="text-sm font-semibold text-on-surface">{siteConfig.rating}</span>
-              <span className="text-xs text-on-surface-variant/60">| {siteConfig.reviews} reviews</span>
-              <GoogleLogo className="h-4 w-4 ml-1" />
+      <PageHeader
+        badge="TESTIMONIALS"
+        title={<>Real Results. <span className="text-primary">Real Dentists. Real Journeys.</span></>}
+        description="Hear from our successful candidates — real stories of dedication, expert guidance, and ADC success from dentists around the world."
+      >
+        <div className="flex items-center justify-center gap-3 mt-8">
+          <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 backdrop-blur border border-gray-100 shadow-sm">
+            <div className="flex">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
+              ))}
             </div>
+            <span className="text-sm font-semibold text-on-surface">{siteConfig.rating}</span>
+            <span className="text-xs text-on-surface-variant/60">| {siteConfig.reviews} reviews</span>
+            <GoogleLogo className="h-4 w-4 ml-1" />
           </div>
         </div>
-      </section>
+      </PageHeader>
 
       <section className="max-w-6xl mx-auto px-5 -mt-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">

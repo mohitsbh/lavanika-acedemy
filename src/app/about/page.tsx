@@ -1,5 +1,8 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import PageHeader from "@/components/page-header"
+import SectionWrapper from "@/components/section-wrapper"
+import GlassCard, { GlassCardIcon } from "@/components/glass-card"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -22,20 +25,11 @@ const iconMap: Record<string, React.ReactNode> = {
 export default function AboutPage() {
   return (
     <div className="pt-20">
-      <section className="relative overflow-hidden py-20 md:py-28">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] via-surface to-primary/10" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
-        <div className="relative max-w-7xl mx-auto px-5 text-center">
-          <Badge className="mb-5 bg-primary/10 text-primary border-primary/20">ABOUT US</Badge>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-on-surface tracking-tight max-w-4xl mx-auto leading-[1.1]">
-            More Than a Course.{" "}
-            <span className="text-primary">A Community That Guides You.</span>
-          </h1>
-          <p className="text-on-surface-variant text-lg md:text-xl mt-5 max-w-2xl mx-auto leading-relaxed">
-            At Lavanika Academy, we support overseas-trained dentists through every step of the ADC journey — with expert mentorship, real-world strategies, and a learning environment that feels like home.
-          </p>
-        </div>
-      </section>
+      <PageHeader
+        badge="ABOUT US"
+        title={<>More Than a Course. <span className="text-primary">A Community That Guides You.</span></>}
+        description="At Lavanika Academy, we support overseas-trained dentists through every step of the ADC journey — with expert mentorship, real-world strategies, and a learning environment that feels like home."
+      />
 
       <AnimateOnScroll>
         <section className="max-w-7xl mx-auto px-5 -mt-10 relative z-10">
@@ -46,18 +40,16 @@ export default function AboutPage() {
             { icon: Clock, label: "Live Coaching", value: `${siteConfig.liveHours}+ hrs`, desc: "Expert-led sessions" },
             { icon: GraduationCap, label: "Community", value: `${siteConfig.communityMembers}+`, desc: "Active learners" },
           ].map((s, i) => (
-            <Card key={i} className="group p-6 md:p-8 text-center bg-white/70 backdrop-blur-xl border border-gray-100 hover:border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-500">
-              <CardContent className="p-0 space-y-3">
-                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-500">
-                  <s.icon className="h-5 w-5 text-primary" />
-                </div>
-                <div className="text-3xl md:text-4xl font-bold text-primary group-hover:scale-105 transition-transform duration-500">{s.value}</div>
-                <div>
-                  <p className="text-sm font-semibold text-on-surface">{s.label}</p>
-                  <p className="text-xs text-on-surface-variant/60 mt-0.5">{s.desc}</p>
-                </div>
-              </CardContent>
-            </Card>
+            <GlassCard key={i} className="group" contentClassName="p-0 text-center">
+              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-500">
+                <s.icon className="h-5 w-5 text-primary" />
+              </div>
+              <div className="text-3xl md:text-4xl font-bold text-primary group-hover:scale-105 transition-transform duration-500">{s.value}</div>
+              <div>
+                <p className="text-sm font-semibold text-on-surface">{s.label}</p>
+                <p className="text-xs text-on-surface-variant/60 mt-0.5">{s.desc}</p>
+              </div>
+            </GlassCard>
           ))}
         </div>
       </section>
@@ -183,15 +175,13 @@ export default function AboutPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {dataValues.map((v, i) => (
-            <Card key={i} className="group p-8 bg-white/70 backdrop-blur-xl border border-gray-100 hover:border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-500">
-              <CardContent className="p-0 space-y-4">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center group-hover:scale-110 group-hover:shadow-md transition-all duration-500">
-                  {iconMap[v.title] || <HeartHandshake className="h-5 w-5 text-primary" />}
-                </div>
-                <h3 className="text-xl font-semibold text-on-surface group-hover:text-primary transition-colors">{v.title}</h3>
-                <p className="text-sm text-on-surface-variant/80 leading-relaxed">{v.description}</p>
-              </CardContent>
-            </Card>
+            <GlassCard key={i} className="group" contentClassName="p-0 space-y-4">
+              <GlassCardIcon className="group-hover:scale-110 group-hover:shadow-md transition-all duration-500">
+                {iconMap[v.title] || <HeartHandshake className="h-5 w-5 text-primary" />}
+              </GlassCardIcon>
+              <h3 className="text-xl font-semibold text-on-surface group-hover:text-primary transition-colors">{v.title}</h3>
+              <p className="text-sm text-on-surface-variant/80 leading-relaxed">{v.description}</p>
+            </GlassCard>
           ))}
         </div>
       </section>
@@ -205,18 +195,16 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             {team.map((member, i) => (
-              <Card key={i} className="group p-8 text-center bg-white/70 backdrop-blur-xl border border-gray-100 hover:border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-500">
-                <CardContent className="p-0 space-y-4">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto text-2xl font-bold text-primary group-hover:scale-110 transition-transform duration-500">
-                    {member.name.split(" ").map(n => n[0]).join("")}
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-on-surface">{member.name}</h3>
-                    <p className="text-sm text-primary font-medium">{member.role}</p>
-                  </div>
-                  <p className="text-sm text-on-surface-variant/80 leading-relaxed">{member.bio}</p>
-                </CardContent>
-              </Card>
+              <GlassCard key={i} className="group text-center" contentClassName="p-0 space-y-4">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto text-2xl font-bold text-primary group-hover:scale-110 transition-transform duration-500">
+                  {member.name.split(" ").map(n => n[0]).join("")}
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-on-surface">{member.name}</h3>
+                  <p className="text-sm text-primary font-medium">{member.role}</p>
+                </div>
+                <p className="text-sm text-on-surface-variant/80 leading-relaxed">{member.bio}</p>
+              </GlassCard>
             ))}
           </div>
         </div>
