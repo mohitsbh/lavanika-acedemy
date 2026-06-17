@@ -205,34 +205,56 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-primary/5">
-        <div className="max-w-4xl mx-auto px-5 text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-on-surface">
-            Ready to Start Your ADC Journey?
+      <section className="relative py-20 md:py-28 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] via-primary/[0.01] to-transparent" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+        <div className="relative max-w-4xl mx-auto px-5 text-center">
+          <Badge className="mb-5 bg-primary/10 text-primary border-primary/20">GET STARTED TODAY</Badge>
+          <h2 className="text-3xl md:text-5xl font-bold text-on-surface tracking-tight leading-[1.15]">
+            Ready to Start Your{" "}
+            <span className="text-primary">ADC Journey?</span>
           </h2>
-          <p className="text-lg text-on-surface-variant max-w-2xl mx-auto">
+          <p className="text-lg text-on-surface-variant mt-5 max-w-2xl mx-auto leading-relaxed">
             Join Lavanika Academy and Prepare with Confidence. Get expert mentorship, real exam practice, and a supportive learning environment tailored for overseas-trained dentists.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" asChild>
-              <Link href="/services">Start Learning Now <ArrowRight className="ml-2 h-4 w-4" /></Link>
+          <div className="flex flex-wrap justify-center gap-4 mt-10">
+            <Button size="lg" className="shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-shadow" asChild>
+              <Link href="/courses">Explore Courses <ArrowRight className="ml-2 h-4 w-4" /></Link>
             </Button>
-            <Button variant="secondary" size="lg" asChild>
-              <Link href="/contact">Contact Us</Link>
+            <Button variant="outline" size="lg" className="ring-1 ring-gray-200 hover:ring-primary/30 hover:text-primary" asChild>
+              <Link href="/contact">Book a Consultation</Link>
             </Button>
           </div>
-          <p className="text-sm text-on-surface-variant">
-            Trusted by 1,200+ overseas dentists worldwide
-          </p>
+          <div className="flex items-center justify-center gap-8 mt-10 pt-8 border-t border-gray-100">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-primary">{stats[0].value}{stats[0].suffix}</div>
+              <p className="text-xs text-on-surface-variant/60 mt-0.5">{stats[0].label}</p>
+            </div>
+            <div className="w-px h-10 bg-gray-200" />
+            <div className="text-center">
+              <div className="text-2xl font-bold text-primary">{stats[1].value}{stats[1].suffix}</div>
+              <p className="text-xs text-on-surface-variant/60 mt-0.5">{stats[1].label}</p>
+            </div>
+            <div className="w-px h-10 bg-gray-200" />
+            <div className="text-center">
+              <div className="text-2xl font-bold text-primary">{stats[2].value}{stats[2].suffix}</div>
+              <p className="text-xs text-on-surface-variant/60 mt-0.5">{stats[2].label}</p>
+            </div>
+          </div>
         </div>
       </section>
 
       <div className="fixed bottom-6 right-6 z-40 md:hidden">
-        <Button size="icon" className="h-14 w-14 rounded-full shadow-2xl" asChild>
-          <a href={process.env.NEXT_PUBLIC_CONTACT_PHONE || "https://wa.me/61468434447"} target="_blank" rel="noopener noreferrer">
-            <Stethoscope className="h-6 w-6" />
-          </a>
-        </Button>
+        <a
+          href={process.env.NEXT_PUBLIC_CONTACT_PHONE || "https://wa.me/61468434447"}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center h-14 w-14 rounded-full bg-[#25D366] shadow-2xl hover:bg-[#25D366]/90 transition-all active:scale-95"
+        >
+          <svg viewBox="0 0 24 24" fill="white" className="h-7 w-7">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+        </a>
       </div>
     </>
   )
