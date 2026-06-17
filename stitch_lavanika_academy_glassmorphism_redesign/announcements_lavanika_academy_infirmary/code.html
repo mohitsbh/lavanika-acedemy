@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Announcements | Lavanika Academy Infirmary</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline": "#737688",
+                      "inverse-surface": "#263143",
+                      "on-secondary-fixed-variant": "#004d67",
+                      "primary-fixed": "#dce1ff",
+                      "on-tertiary-fixed-variant": "#384953",
+                      "surface-variant": "#d8e3fb",
+                      "on-primary-fixed-variant": "#003ab2",
+                      "outline-variant": "#c3c5d9",
+                      "on-secondary": "#ffffff",
+                      "surface-bright": "#f9f9ff",
+                      "primary-container": "#0057ff",
+                      "tertiary-container": "#5a6b75",
+                      "on-tertiary-fixed": "#0c1e26",
+                      "primary": "#0043c8",
+                      "surface-container-high": "#dee8ff",
+                      "tertiary-fixed-dim": "#b7c9d5",
+                      "on-primary-container": "#e5e8ff",
+                      "secondary": "#006688",
+                      "error": "#ba1a1a",
+                      "tertiary-fixed": "#d3e5f1",
+                      "secondary-fixed-dim": "#75d1ff",
+                      "surface": "#f9f9ff",
+                      "secondary-container": "#00c1fd",
+                      "surface-dim": "#cfdaf2",
+                      "tertiary": "#42535d",
+                      "on-background": "#111c2d",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-primary": "#b6c4ff",
+                      "on-surface-variant": "#434656",
+                      "on-surface": "#111c2d",
+                      "on-error": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-container": "#004b65",
+                      "error-container": "#ffdad6",
+                      "on-error-container": "#93000a",
+                      "background": "#f9f9ff",
+                      "on-primary": "#ffffff",
+                      "surface-container-highest": "#d8e3fb",
+                      "on-secondary-fixed": "#001e2b",
+                      "inverse-on-surface": "#ecf1ff",
+                      "on-tertiary-container": "#daebf7",
+                      "surface-tint": "#004ee7",
+                      "surface-container-low": "#f0f3ff",
+                      "secondary-fixed": "#c2e8ff",
+                      "on-primary-fixed": "#001550",
+                      "surface-container": "#e7eeff",
+                      "primary-fixed-dim": "#b6c4ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-lg": "32px",
+                      "stack-md": "16px",
+                      "container-padding": "20px",
+                      "stack-sm": "8px",
+                      "gutter": "16px",
+                      "unit": "4px"
+              },
+              "fontFamily": {
+                      "body-md": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "display": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "label-md": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "display": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background: radial-gradient(circle at top right, #dce1ff 0%, #f9f9ff 50%, #c2e8ff 100%);
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/15 dark:bg-surface-container/20 backdrop-blur-[20px] border-b border-white/30 shadow-[0px_12px_32px_rgba(0,0,0,0.05)]">
+<div class="flex justify-between items-center px-container-padding py-4 max-w-7xl mx-auto">
+<div class="font-headline-md text-headline-md text-primary dark:text-inverse-primary font-bold">
+                Lavanika Academy Infirmary
+            </div>
+<!-- Desktop Navigation -->
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">Services</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">Staff</a>
+<a class="font-body-md text-body-md text-primary dark:text-inverse-primary font-bold border-b-2 border-primary transition-colors" href="#">Announcements</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">Contact</a>
+<button class="ml-4 px-6 py-2 bg-gradient-to-r from-primary to-secondary rounded-full text-white font-semibold shadow-lg scale-95 active:scale-90 transition-transform">
+                    Emergency Call
+                </button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden p-2 text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-24 pb-12 px-container-padding max-w-5xl mx-auto">
+<!-- Header Section -->
+<header class="mb-stack-lg text-center md:text-left">
+<h1 class="font-display text-display text-primary mb-2">Campus Announcements</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Stay updated with the latest health alerts, wellness events, and operational notices from your campus medical center.
+            </p>
+</header>
+<!-- Category Filters -->
+<div class="flex flex-wrap gap-stack-sm mb-stack-lg">
+<button class="px-5 py-2 glass-card rounded-full font-label-md text-label-md text-primary bg-white/30 border-primary/20">All Updates</button>
+<button class="px-5 py-2 glass-card rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-white/20 transition-all">Health Alerts</button>
+<button class="px-5 py-2 glass-card rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-white/20 transition-all">Events</button>
+<button class="px-5 py-2 glass-card rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-white/20 transition-all">Holiday Notices</button>
+</div>
+<!-- Announcements Timeline -->
+<div class="relative space-y-gutter">
+<!-- Timeline Line (Desktop Only) -->
+<div class="hidden md:block absolute left-8 top-0 bottom-0 w-px bg-primary/20"></div>
+<!-- Announcement 1 -->
+<div class="relative flex flex-col md:flex-row gap-gutter group">
+<div class="hidden md:flex items-start pt-10">
+<div class="w-16 h-16 rounded-full glass-card flex items-center justify-center z-10 bg-white ring-4 ring-background">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+</div>
+</div>
+<div class="glass-card flex-1 p-6 md:p-8 rounded-xl hover:shadow-[0px_20px_48px_rgba(0,0,0,0.1)] transition-all duration-300 transform group-hover:-translate-y-1">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+<div class="flex items-center gap-stack-sm">
+<span class="px-3 py-1 bg-error-container text-on-error-container rounded-full font-label-sm text-label-sm uppercase tracking-wider">New</span>
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full font-label-sm text-label-sm">Health Alert</span>
+</div>
+<time class="font-label-sm text-label-sm text-outline">October 24, 2024</time>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-3">Seasonal Flu Vaccination Drive: Round 1</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                        Protect yourself and our community as we enter the peak flu season. The infirmary will be hosting a walk-in vaccination clinic for all students and staff. Please bring your Academy ID card and insurance details if applicable. No prior appointment is necessary for this round.
+                    </p>
+<button class="flex items-center gap-2 px-6 py-2 glass-card rounded-full text-primary font-semibold hover:bg-primary/5 transition-colors">
+                        Read More
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Announcement 2 -->
+<div class="relative flex flex-col md:flex-row gap-gutter group">
+<div class="hidden md:flex items-start pt-10">
+<div class="w-16 h-16 rounded-full glass-card flex items-center justify-center z-10 bg-white ring-4 ring-background">
+<span class="material-symbols-outlined text-secondary">self_improvement</span>
+</div>
+</div>
+<div class="glass-card flex-1 p-6 md:p-8 rounded-xl hover:shadow-[0px_20px_48px_rgba(0,0,0,0.1)] transition-all duration-300 transform group-hover:-translate-y-1">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+<div class="flex items-center gap-stack-sm">
+<span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full font-label-sm text-label-sm">Event</span>
+</div>
+<time class="font-label-sm text-label-sm text-outline">October 20, 2024</time>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-3">Mindfulness &amp; Stress Management Workshop</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                        Join our wellness counselors in the Great Hall for an afternoon dedicated to mental clarity. We'll be covering practical techniques for managing academic pressure, including guided meditation and tactical breathing exercises.
+                    </p>
+<button class="flex items-center gap-2 px-6 py-2 glass-card rounded-full text-primary font-semibold hover:bg-primary/5 transition-colors">
+                        Read More
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Announcement 3 (With Image) -->
+<div class="relative flex flex-col md:flex-row gap-gutter group">
+<div class="hidden md:flex items-start pt-10">
+<div class="w-16 h-16 rounded-full glass-card flex items-center justify-center z-10 bg-white ring-4 ring-background">
+<span class="material-symbols-outlined text-tertiary">calendar_month</span>
+</div>
+</div>
+<div class="glass-card flex-1 rounded-xl overflow-hidden hover:shadow-[0px_20px_48px_rgba(0,0,0,0.1)] transition-all duration-300 transform group-hover:-translate-y-1">
+<div class="h-48 md:h-64 w-full relative">
+<img alt="Academy infirmary interior" class="w-full h-full object-cover" data-alt="A bright, high-end medical clinic interior within a prestigious academy. The architecture features large arched windows casting soft, natural morning light across a clean, minimalist waiting area with glass accents and ergonomic furniture. The atmosphere is serene, professional, and sophisticated, reflecting a premium medical environment with a palette of soft whites and calm blues." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwQJD4mtW4FlCnureqJa1sDhtGtLgZxAxRz9R3yJvUFMRw9660nlqJ3VvQBS74QhWpjWbtflrkgD-NZ1jLQQYMJNlL_v9LaAMlUKM6kNdjFLa6zLm2zaDGjUWFERsBy7jHHntEzvNk1mvZXyowLeCTbdq_InCa2OgDswjHKFuUwmhXG9UhmKFdhDJeXEwromTWardQm_nZHkczAsMttQaI59KZROa1WxwasiWEDpDHpvsZTnZGMVszMHjiKty2qKjX-zvoS34D3xQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 md:p-8">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+<div class="flex items-center gap-stack-sm">
+<span class="px-3 py-1 bg-tertiary/10 text-tertiary rounded-full font-label-sm text-label-sm">Holiday Notice</span>
+</div>
+<time class="font-label-sm text-label-sm text-outline">October 15, 2024</time>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-3">Mid-Term Break Operating Hours</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                            Please note that the Lavanika Academy Infirmary will operate on reduced hours during the upcoming mid-term break. Emergency services will remain available 24/7 through our on-call campus security protocols.
+                        </p>
+<button class="flex items-center gap-2 px-6 py-2 glass-card rounded-full text-primary font-semibold hover:bg-primary/5 transition-colors">
+                            Read More
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Older Items Loader -->
+<div class="flex justify-center py-stack-lg">
+<button class="px-8 py-3 bg-white/40 border border-primary/20 text-primary font-bold rounded-full hover:bg-primary hover:text-white transition-all duration-300 shadow-sm">
+                    Load More Announcements
+                </button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-stack-lg bg-white/15 dark:bg-surface-container/20 backdrop-blur-[20px] border-t border-white/30">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-container-padding py-stack-lg max-w-7xl mx-auto">
+<div class="space-y-stack-sm">
+<div class="font-headline-md text-headline-md text-primary dark:text-inverse-primary font-bold">
+                    Lavanika Academy Infirmary
+                </div>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant">
+                    Providing elite medical care for the future leaders of Lavanika Academy. Your health, our priority.
+                </p>
+</div>
+<div class="flex flex-col gap-unit">
+<h3 class="font-label-md text-label-md text-primary mb-stack-sm uppercase tracking-wider">Quick Links</h3>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Patient Portal</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Campus Security</a>
+</div>
+<div class="space-y-stack-sm">
+<h3 class="font-label-md text-label-md text-primary mb-stack-sm uppercase tracking-wider">Emergency</h3>
+<div class="flex items-center gap-2 text-on-surface-variant dark:text-surface-variant">
+<span class="material-symbols-outlined text-error">call</span>
+<span class="font-body-md text-body-md">+1 (555) ACAD-911</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant opacity-70">
+                    © 2024 Lavanika Academy Infirmary. All rights reserved.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll interaction for header
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-xl');
+            } else {
+                nav.classList.remove('shadow-xl');
+            }
+        });
+
+        // Hover effect enhancement for glass cards
+        const cards = document.querySelectorAll('.glass-card');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body></html>

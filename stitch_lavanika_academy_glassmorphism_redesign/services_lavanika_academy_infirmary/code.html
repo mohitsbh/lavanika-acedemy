@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Medical Services | Lavanika Academy Infirmary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .text-glow:hover {
+            text-shadow: 0 0 15px rgba(0, 67, 200, 0.3);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline": "#737688",
+                      "inverse-surface": "#263143",
+                      "on-secondary-fixed-variant": "#004d67",
+                      "primary-fixed": "#dce1ff",
+                      "on-tertiary-fixed-variant": "#384953",
+                      "surface-variant": "#d8e3fb",
+                      "on-primary-fixed-variant": "#003ab2",
+                      "outline-variant": "#c3c5d9",
+                      "on-secondary": "#ffffff",
+                      "surface-bright": "#f9f9ff",
+                      "primary-container": "#0057ff",
+                      "tertiary-container": "#5a6b75",
+                      "on-tertiary-fixed": "#0c1e26",
+                      "primary": "#0043c8",
+                      "surface-container-high": "#dee8ff",
+                      "tertiary-fixed-dim": "#b7c9d5",
+                      "on-primary-container": "#e5e8ff",
+                      "secondary": "#006688",
+                      "error": "#ba1a1a",
+                      "tertiary-fixed": "#d3e5f1",
+                      "secondary-fixed-dim": "#75d1ff",
+                      "surface": "#f9f9ff",
+                      "secondary-container": "#00c1fd",
+                      "surface-dim": "#cfdaf2",
+                      "tertiary": "#42535d",
+                      "on-background": "#111c2d",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-primary": "#b6c4ff",
+                      "on-surface-variant": "#434656",
+                      "on-surface": "#111c2d",
+                      "on-error": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-container": "#004b65",
+                      "error-container": "#ffdad6",
+                      "on-error-container": "#93000a",
+                      "background": "#f9f9ff",
+                      "on-primary": "#ffffff",
+                      "surface-container-highest": "#d8e3fb",
+                      "on-secondary-fixed": "#001e2b",
+                      "inverse-on-surface": "#ecf1ff",
+                      "on-tertiary-container": "#daebf7",
+                      "surface-tint": "#004ee7",
+                      "surface-container-low": "#f0f3ff",
+                      "secondary-fixed": "#c2e8ff",
+                      "on-primary-fixed": "#001550",
+                      "surface-container": "#e7eeff",
+                      "primary-fixed-dim": "#b6c4ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-lg": "32px",
+                      "stack-md": "16px",
+                      "container-padding": "20px",
+                      "stack-sm": "8px",
+                      "gutter": "16px",
+                      "unit": "4px"
+              },
+              "fontFamily": {
+                      "body-md": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "display": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "label-md": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "display": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-white/15 backdrop-blur-[20px] border-b border-white/30 shadow-[0px_12px_32px_rgba(0,0,0,0.05)]">
+<nav class="flex justify-between items-center px-container-padding py-4 max-w-7xl mx-auto">
+<div class="font-headline-md text-headline-md text-primary font-bold">Lavanika Academy Infirmary</div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary transition-colors" href="#">Services</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Staff</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Announcements</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary px-6 py-2 rounded-full font-label-md scale-95 active:scale-90 transition-transform shadow-lg shadow-primary/20">
+                Emergency Call
+            </button>
+</nav>
+</header>
+<main class="relative pt-32 pb-20 px-container-padding max-w-7xl mx-auto overflow-hidden">
+<!-- Background Decorative Elements -->
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/10 rounded-full blur-[100px] -z-10"></div>
+<div class="absolute top-1/2 -right-24 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[120px] -z-10"></div>
+<!-- Header Section -->
+<section class="text-center mb-16 space-y-4">
+<h1 class="font-display text-display text-primary uppercase tracking-tight">Our Medical Services</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Providing comprehensive healthcare excellence within the Lavanika Academy ecosystem, ensuring every student and staff member thrives in a healthy environment.
+            </p>
+</section>
+<!-- Bento Grid / Services Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- General Checkups -->
+<div class="md:col-span-8 group">
+<div class="glass-card h-full bg-white/15 border border-white/30 rounded-xl p-stack-lg shadow-[0px_12px_32px_rgba(0,0,0,0.05)] hover:shadow-[0px_20px_40px_rgba(0,67,200,0.1)] transition-all duration-300 hover:-translate-y-1 overflow-hidden relative">
+<div class="flex flex-col md:flex-row gap-stack-lg items-center h-full">
+<div class="flex-1 space-y-stack-md">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">medical_information</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">General Checkups</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                Regular wellness exams tailored for student life, including vitals monitoring, nutrition counseling, and holistic health assessments to ensure peak academic performance.
+                            </p>
+<button class="font-label-md text-primary flex items-center gap-1 group-hover:gap-2 transition-all">
+                                Learn More <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<div class="flex-1 w-full h-48 md:h-full rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist medical consultation room inside a prestigious academy infirmary. The space features high-end glass partitions, soft natural lighting, and modern diagnostic equipment. The overall aesthetic is professional, calm, and technologically advanced, with a subtle palette of light blues and crisp whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPAdk6-TEdGsx2vxsJIbANz2ZURJM3F-41P3In3ctfD3Ks5kKA0q75UdaoJxdDPktEdj2CO9vvKUGu4rI0L6GN743wF00W6jHHTEX_A38302jEsH6OfVEvbqnjaC9APk1i4kwRy-DwO_yYlnX3PQF0EM4-D2qs6X1xEzjZ5gLXRETYVMSHiWQVv75O4z5t7TMUFfgMFcXLy5qq1suCk9NMu0lGpeAeTZdS8THPlHSXmrm0YJxDsDtMW7NjpDrsVzVEg9h8uelF07s"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Emergency Care -->
+<div class="md:col-span-4 group">
+<div class="glass-card h-full bg-primary/5 border border-primary/20 rounded-xl p-stack-lg shadow-[0px_12px_32px_rgba(0,0,0,0.05)] hover:shadow-[0px_20px_40px_rgba(186,26,26,0.1)] transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+<div class="space-y-stack-md">
+<div class="w-12 h-12 rounded-full bg-error/10 flex items-center justify-center text-error">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">emergency</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Emergency Care</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Rapid response medical intervention available 24/7. Our specialized triage team is always on standby for on-campus incidents.
+                        </p>
+</div>
+<div class="mt-stack-lg pt-stack-md border-t border-error/10">
+<span class="text-error font-label-sm uppercase tracking-widest">Available 24/7</span>
+</div>
+</div>
+</div>
+<!-- Vaccination -->
+<div class="md:col-span-4 group">
+<div class="glass-card h-full bg-white/15 border border-white/30 rounded-xl p-stack-lg shadow-[0px_12px_32px_rgba(0,0,0,0.05)] hover:shadow-[0px_20px_40px_rgba(0,67,200,0.1)] transition-all duration-300 hover:-translate-y-1">
+<div class="space-y-stack-md">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">vaccines</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Vaccination</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Immunization programs designed to keep our campus community safe. We provide seasonal flu shots and routine travel vaccinations.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Counseling -->
+<div class="md:col-span-4 group">
+<div class="glass-card h-full bg-white/15 border border-white/30 rounded-xl p-stack-lg shadow-[0px_12px_32px_rgba(0,0,0,0.05)] hover:shadow-[0px_20px_40px_rgba(0,67,200,0.1)] transition-all duration-300 hover:-translate-y-1">
+<div class="space-y-stack-md">
+<div class="w-12 h-12 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Counseling</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Confidential mental health support and academic stress management. Our licensed counselors provide a safe space for growth.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Pharmacy -->
+<div class="md:col-span-4 group">
+<div class="glass-card h-full bg-white/15 border border-white/30 rounded-xl p-stack-lg shadow-[0px_12px_32px_rgba(0,0,0,0.05)] hover:shadow-[0px_20px_40px_rgba(0,67,200,0.1)] transition-all duration-300 hover:-translate-y-1">
+<div class="space-y-stack-md">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">prescriptions</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Pharmacy</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Full-service on-campus dispensary for prescription medication and health supplies, ensuring students have immediate access to care.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Appointment CTA Section -->
+<section class="mt-20">
+<div class="glass-card bg-primary-container/10 border border-primary/20 rounded-2xl p-10 text-center relative overflow-hidden">
+<div class="absolute inset-0 -z-10 opacity-30">
+
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Ready to Schedule a Visit?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl mx-auto">
+                    Skip the wait and book your appointment online through our secure patient portal.
+                </p>
+<div class="flex flex-col sm:flex-row gap-gutter justify-center">
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-md hover:shadow-lg hover:shadow-primary/30 transition-all">Book Appointment</button>
+<button class="bg-white/40 backdrop-blur-md border border-white/50 text-primary px-8 py-3 rounded-full font-label-md hover:bg-white/60 transition-all">Patient Portal</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-stack-lg bg-white/15 backdrop-blur-[20px] border-t border-white/30 no-shadow">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-container-padding py-stack-lg max-w-7xl mx-auto">
+<div class="space-y-stack-sm">
+<div class="font-headline-md text-headline-md text-primary">Lavanika Academy Infirmary</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Elevating campus health through academic precision and premium care.</p>
+</div>
+<div class="flex flex-col gap-unit">
+<h4 class="font-label-md text-primary mb-2">Quick Links</h4>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Patient Portal</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Campus Security</a>
+</div>
+<div class="space-y-stack-sm">
+<h4 class="font-label-md text-primary mb-2">Emergency Contact</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Lavanika Campus, East Wing, Level 2</p>
+<p class="font-body-md text-body-md text-primary font-bold">+1 (800) INFIRMARY</p>
+</div>
+</div>
+<div class="px-container-padding py-4 text-center border-t border-white/10">
+<p class="font-label-sm text-on-surface-variant">© 2024 Lavanika Academy Infirmary. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for glass cards
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body></html>

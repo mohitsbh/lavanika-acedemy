@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 224 100% 39%;
+    --primary-container: 220 100% 50%;
+    --secondary: 192 100% 27%;
+    --secondary-container: 192 100% 50%;
+    --tertiary: 200 9% 31%;
+    --surface: 225 100% 99%;
+    --on-surface: 218 45% 12%;
+    --on-surface-variant: 235 8% 30%;
+    --error: 0 76% 42%;
+    --background: 225 100% 99%;
+  }
+
+  body {
+    background-color: #f9f9ff;
+    background-image:
+      radial-gradient(at 0% 0%, hsla(220, 100%, 95%, 1) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(200, 100%, 95%, 1) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(220, 100%, 92%, 1) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsla(180, 100%, 95%, 1) 0px, transparent 50%);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .glass-dark {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+  .glass-hover {
+    transition: all 0.3s ease;
+  }
+  .glass-hover:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(0, 67, 200, 0.4);
+  }
+
+  .marquee {
+    --marquee-duration: 28s;
+    position: relative;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .marquee__track {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 0.6rem 0;
+    width: max-content;
+    animation: marquee-slide var(--marquee-duration) linear infinite;
+    will-change: transform;
+  }
+
+  .marquee__item {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.45rem 1rem;
+    border-radius: 9999px;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.01em;
+    color: #0f172a;
+    text-decoration: none;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    background: radial-gradient(120px 120px at 12% 18%, color-mix(in srgb, #0f71f2 24%, transparent) 0%, transparent 60%),
+                radial-gradient(140px 140px at 88% 80%, color-mix(in srgb, #b00070 14%, transparent) 0%, transparent 62%),
+                rgba(255, 255, 255, 0.72);
+    box-shadow: 0 1px rgba(15, 23, 42, 0.06), 0 8px 20px -8px rgba(15, 23, 42, 0.12);
+    backdrop-filter: saturate(110%) blur(6px);
+    -webkit-backdrop-filter: saturate(110%) blur(6px);
+    cursor: default;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  }
+
+  .marquee:hover .marquee__track {
+    animation-play-state: paused;
+  }
+
+  a.marquee__item {
+    cursor: pointer;
+  }
+
+  .marquee__item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 2px rgba(15, 23, 42, 0.04), 0 14px 28px -10px rgba(15, 23, 42, 0.18);
+  }
+
+  @keyframes marquee-slide {
+    0% { transform: translate(0); }
+    100% { transform: translate(-50%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee__track {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transform: translate(0) !important;
+    }
+  }
+}
